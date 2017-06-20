@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: django
+    working_dir: "/home/django/app"
+    ports:
+      - "8888:8888"
+    entrypoint: ./notebug/manage.py
+    command: shell_plus --notebook
