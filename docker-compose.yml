@@ -10,4 +10,4 @@ services:
     ports:
       - "8888:8888"
     entrypoint: ./notebug/manage.py
-    command: shell_plus --notebook
+    command: shell_plus --notebook --no-browser
